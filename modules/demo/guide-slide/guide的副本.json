@@ -1,0 +1,451 @@
+{
+  "status": {
+    "code": "0"
+  },
+  "result": {
+    "data": {
+      "city": {
+        "guide": "12",
+        "title": "东京",
+        "travel": "54",
+        "pic": "http://10.1.4.104:18000/vsp-245810cf104c9112328d855907fe7ab2.jpg"
+      },
+      "article": [
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        },
+        {
+          "id": 3879,
+          "position": -2,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "content": "北海道3天游",
+              "author": "zhenjing",
+              "title": "北海道3天游",
+              "acticleId": "12",
+              "pic": "http://10.1.4.104:18000/vsp-73af0f084f092b72c4d11da88c40e312.jpg",
+              "date":"2015.11.30",
+              "url": "http://www.weidian.com/"
+            },
+            "type": "article"
+          },
+          "type": "article"
+        }
+      ],
+      "guide": [
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3878,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬",
+              "guideId": "123",
+              "pic": "http://10.1.4.104:18000/vsp-fa4903f548cc905eafe7a0ecae23f5c2.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        },
+        {
+          "id": 3879,
+          "position": -1,
+          "themeId": 344,
+          "attrs": {
+            "datas": {
+              "tags": ["旅行","达人","星星"],
+              "headpic": "http://10.1.4.104:18000/vsp-edbbf36b6381feb16b12a0754af37cfc.jpg",
+              "title": "陈珍敬1",
+              "guideId": "1234",
+              "pic": "http://10.1.4.104:18000/vsp-3f123d7eb4b5f6068ad79c7f6b9b5864.jpg",
+              "signature": "人生犹如旅行，处处是风景。",
+              "city": "东京"
+            },
+            "type": "guide"
+          },
+          "type": "guide"
+        }
+      ]
+    }
+  }
+}

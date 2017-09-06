@@ -1,0 +1,190 @@
+<template title>
+	Slider 滑动
+</template>
+
+<template content>
+
+	<section>
+        <h2>使用</h2>
+        <scroll class=exp stop-propagation="auto" x=auto y=false>
+            <scrolling style="min-width:{setting.articleWidth}dp">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指令</th>
+                            <th>值</th>
+                            <th>描述</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>navTemplates</td>
+                            <td>[template-name]</td>
+                            <td>导航按钮的模版</td>
+                        </tr>
+                        <tr>
+                            <td>tabContainer</td>
+                            <td>[tab-content-id]</td>
+                            <td>和导航对应的内容包裹元素</td>
+                        </tr>
+                        <tr>
+                            <td>subScrollers</td>
+                            <td>[tab-content-scroll-id]</td>
+                            <td>内容包裹元素中的子滚动</td>
+                        </tr>
+                        <tr>
+                            <td>parentScroller</td>
+                            <td>[parent-scroller-id]</td>
+                            <td>父级滚动元素</td>
+                        </tr>
+                        <tr>
+                            <td>tabswitch</td>
+                            <td>[tab-switch-id]</td>
+                            <td>默认显示的 tab 项</td>
+                        </tr>
+                        <tr>
+                            <td>slideScroller</td>
+                            <td>[slide-scroller-id]</td>
+                            <td>横向卡片滑动的滚动元素</td>
+                        </tr>
+                        <tr>
+                            <td>inline</td>
+                            <td>无/none</td>
+                            <td>设置时导航栏左对齐，未设置时默认居中对齐</td>
+                        </tr>
+                        <tr>
+                            <td>parallax</td>
+                            <td>无/none</td>
+                            <td>有外滚动时是否使用视差滚动效果</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </scrolling>
+        </scroll>
+
+        <script sync>
+            scope.tabconfig = {
+                navTemplates : ['tab-1', 'tab-2'],
+                tabContainer : ["scroller-1-content", "scroller-2-content"],
+                subScrollers : ["scroller-1", "scroller-2"],
+                parentScroller : "scroller-main",
+                slideScroller : "scroller-main",
+                tabswitch : scope.module.param.tabswitch,
+                parallax : "none"
+            }
+        </script>
+        <style>
+        .scroll-main {
+            width: 100%;
+            height: 200dp;
+        }
+        .scroll-g {
+            float: left;
+            height: 200dp;
+            width: 100%;
+        }
+        .scroll-g div {
+            height: 50dp;
+            background: #f9f9f9;
+            line-height: 50dp;
+            text-align: center;
+            margin-bottom: 5dp;
+        }
+        </style>
+
+        <tab-switch data="tabconfig"></tab-switch>
+        <scroll uuid="scroller-main" class="scroll-main" x snap scrollbars=false bounce=false stop-propagation resize-scrollbars=false>
+            <scrolling style="width:200%">
+                <div class="scroll-g" uuid="scroller-1-content" style="width: 50%;">
+                    <scroll uuid="scroller-1" class="scroll-g">
+                        <scrolling>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                            <div>1</div>
+                        </scrolling>
+                    </scroll>
+                </div>
+
+                <div class="scroll-g" uuid="scroller-2-content" style="width: 50%;">
+                    <scroll uuid="scroller-2" class="scroll-g">
+                        <scrolling>
+                            <div>2</div>
+                            <div>2</div>
+                            <div>2</div>
+                            <div>2</div>
+                        </scrolling>
+                    </scroll>
+                </div>
+            </scrolling>
+        </scroll>
+
+        <template name="tab-1">
+            <div class="tab"><div><span>Tab1</span></div></div>
+        </template>
+
+        <template name="tab-2">
+            <div class="tab"><div><span>Tab2</span></div></div>
+        </template>
+
+        <code-highlight type=html>
+            <script sync es6>
+                scope.tabconfig = {
+                    navTemplates : ['tab-1', 'tab-2'],
+                    tabContainer : ["scroller-1-content", "scroller-2-content"],
+                    subScrollers : ["scroller-1", "scroller-2"],
+                    parentScroller : "scroller-main",
+                    tabswitch : scope.module.param.tabswitch,
+                    parallax : "none"
+                }
+            </script>
+            <scroll uuid="scroller-main" class="scroll-main" scrollbars=false bounce=false stop-propagation resize-scrollbars=false>
+                <scrolling>
+                    <tab-switch data="tabconfig"></tab-switch>
+                    <div class="scroll-g" uuid="scroller-1-content">
+                        <scroll uuid="scroller-1" class="scroll-g">
+                            <scrolling>
+                                <div>1</div>
+                                <div>1</div>
+                                <div>1</div>
+                            </scrolling>
+                        </scroll>
+                    </div>
+                    <div class="scroll-g" uuid="scroller-2-content" style="visibility: hidden;">
+                        <scroll uuid="scroller-2" class="scroll-g">
+                            <scrolling>
+                                <div>2</div>
+                                <div>2</div>
+                                <div>2</div>
+                            </scrolling>
+                        </scroll>
+                    </div>
+                </scrolling>
+            </scroll>
+        </code-highlight>
+
+        <blockquote>
+            <h5>注意</h5>
+            <p>由于该组件可配置参数很多，因此推荐使用 data 导入配置给组件，同样对于非驼峰的纯小写配置项也可以使用传统入参方式</p>
+            <code-highlight type=html>
+                <tab-switch data="tabconfig" parallax=true tabswitch=1 ></tab-switch>
+            </code-highlight>
+        </blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+</template>

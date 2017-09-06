@@ -1,0 +1,103 @@
+<var data>
+	{	
+		header: city.result.data.headInfo.attrs ? city.result.data.headInfo.attrs.datas : {}
+	}
+</var>
+
+<template guider>
+	<figure class="card guide" transform="guide-info" param="sellerid:{{attrs.datas.guideId}},shopid:{{attrs.datas.guideId}}" data-event="type:0,name:城市导游页面埋点,value:{{attrs.datas.title}}">
+		<div class="content" style="background-image: onload url('{{attrs.datas.pic}}')">
+		</div>
+		<footer>
+			<div class="author" style="background-image: onload url('{{attrs.datas.headpic}}')"></div>
+			<div class="notes">
+				<h3>{{attrs.datas.title}}</h3>
+				<p>{{attrs.datas.signature}}</p>
+				<ul class="tags clear">
+					<loop data="attrs.datas.tags" as v k>
+						<if is="k < 4">
+							<li>{{v}}</li>
+						</if>
+					</loop>
+				</ul>
+			</div>
+		</footer>
+	</figure>
+</template>
+
+<template guide>
+	<figure class="card article" style="background-image: onload url('{{attrs.datas.pic}}')" transform="newslist" param="article_id:{{attrs.datas.articleId}}" data-event="type:0,name:城市攻略页面埋点,value:{{attrs.datas.title}}" prefetch>
+		<div class="mask"></div>
+		<div class="content">
+			<h2>{{attrs.datas.title}}</h2>
+			<div class="notes">
+				<div class="light-line"></div>
+				<p><span>By&nbsp;{{attrs.datas.author}}</span></p>
+				<p><span>{{attrs.datas.date}}</span></p>
+			</div>
+		</div>
+	</figure>
+</template>
+
+
+<script sync>
+	scope.tabconfig = {
+		navTemplates : ['tab-1', 'tab-2'],
+		tabContainer : ["scroller-guider-content", "scroller-guide-content"],
+		subScrollers : ["scroller-guider", "scroller-guide"],
+		parentScroller : "scroller-main",
+		tabswitch : scope.module.param.tabswitch,
+		parallax : "none"
+	}
+</script>
+
+<div class="page">
+	<scroll uuid="scroller-main" class="scroll-main" scrollbars=false bounce=false stop-propagation resize-scrollbars=false>
+		<scrolling>
+			<div class="scroller-content">
+				<header class="header-plan">
+					<figure class="card city header" style="background-image: onload url('{{data.header.pic}}')">
+						<div class="mask"></div>
+						<div class="content">
+							<h2>{{data.header.title}}{{lang.guider}}</h2>
+						</div>
+					</figure>
+
+					<tab-switch data="tabconfig"></tab-switch>
+				</header>
+
+				<div class="scroll-guide" uuid="scroller-guider-content">
+					<if is="!guider.result.data.length"><p class="empty-list">暂无导游信息去别的城市逛逛吧</p></if>
+					<scroll uuid="scroller-guider" class="scroll-guide" infinite item-min-size="170" template="guider" data="guide" limit="50"></scroll>
+					<scroll-to-top styler="scrolltotopstyle"></scroll-to-top>
+				</div>
+
+				<div class="scroll-guide" uuid="scroller-guide-content" style="visibility: hidden;">
+					<if is="!guide.result.data.length"><p class="empty-list">暂无攻略信息去别的城市逛逛吧</p></if>
+					<scroll uuid="scroller-guide" class="scroll-guide" infinite item-min-size="170" template="guide" data="guide" limit="50"></scroll>
+					<scroll-to-top styler="scrolltotopstyle"></scroll-to-top>
+				</div>
+
+			</div>
+		</scrolling>
+	</scroll>
+</div>
+
+<template scrolltotopstyle>
+	<style>
+		@if (device.os.android) {
+			.scroll-top-btn {
+				bottom: auto;
+				top: calc(100vh + 170dp - 50dp);
+			}
+		}
+	</style>
+</template>
+
+<template name="tab-1">
+	<div class="tab"><div><span>{lang.guider}&nbsp;<small>{header.guide}</small></span></div></div>
+</template>
+
+<template name="tab-2">
+	<div class="tab"><div><span>{lang.guide}&nbsp;<small>{header.travel}</small></span></div></div>
+</template>

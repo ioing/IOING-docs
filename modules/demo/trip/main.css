@@ -1,0 +1,213 @@
+@var {
+}
+
+/*注意："<>" 的执行符号不可做变量重复在 "<>" 中再带入*/
+
+body {
+	text-align: center; 
+	overflow: hidden;
+	overflow-y: hidden;
+}
+
+#grid {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+scroll {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #252525;
+}
+
+.me {
+	position: fixed;
+	bottom: 10dp;
+	left: 10dp;
+	width: 42dp;
+	height: 42dp;
+	border-radius: 21dp;
+	background: #fff;
+	background-clip: content-box;
+}
+	.me:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		margin: -4dp;
+		width: 42dp;
+		height: 42dp;
+		border: 4dp solid rgba(151, 151, 151, 0.35);
+		border-radius: 25dp;
+	}
+	.me .icon-me {
+		display: block;
+		position: absolute;
+		top: 8dp;
+		left: 8dp;
+		width: 26dp;
+		height: 26dp;
+		background: url(svg/me.svg);
+		background-size: cover;
+		border-radius: 17dp;
+	}
+
+.card {
+	position: relative;
+	padding: 10dp;
+	height: 180dp;
+	background-color: #252525;
+	background-size: cover;
+	color: #fff;
+}
+	
+	.card .mask {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+		background: rgba(0,0,0,.3);
+	}
+
+	.card .content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.card .notes {
+		height: 35dp;
+		color: rgba(255, 255, 255, 1);
+		font-size: 15dp;
+		line-height: 15dp;
+		max-height: 56dp;
+		overflow: hidden;
+	}
+
+	.card .pipe {
+		display: inline-block;
+		position: relative;
+		width: 1.5dp;
+		background-color: #fff;
+	}
+
+	.card .notes p {
+		display: block;
+		margin-bottom: 3dp;
+		width: 100%;
+		height: 16.5dp;
+		overflow: hidden;
+	}
+
+	.card .notes strong {
+		color: rgba(255, 240, 0, 1);
+		font-weight: normal;
+	}
+
+
+
+.city h2 {
+	padding-top: 40dp;
+	font-size: 30dp;
+	line-height: 42dp;
+	font-weight: 400;
+}
+
+.guide h3 {
+	font-size: 15dp;
+	font-weight: bold;
+	line-height: 21dp;
+	text-align: center;
+}
+
+	.guide .author {
+		margin: 5dp auto;
+		width: 50dp;
+		height: 50dp;
+		border-radius: 25dp;
+		background-size: cover;
+		background-color: #fff;
+		background-position: center;
+	}
+
+	.guide span {
+		font-weight: bold;
+		font-size: 13dp;
+		line-height: 16.5dp;
+	}
+
+	.guide small {
+		font-size: 12dp;
+		line-height: 14dp;
+	}
+
+	.guide .icon-location {
+		display: block;
+		margin: 0;
+		min-width: 15dp;
+		height: 18dp;
+		background: url(svg/location.svg) no-repeat center;
+		background-size: auto 100%;
+	}
+
+	.guide .sub-note {
+		position: absolute;
+		bottom: 10dp;
+		right: 10dp;
+		left: 10dp;
+		text-align: center;
+		color: rgba(255, 240, 0, 1);
+		font-size: 12dp;
+	}
+
+
+.article {
+	text-align: left;
+}
+
+	.article h2 {
+		padding-top: 5dp;
+		max-height: 33dp;
+		font-size: 20dp;
+		font-weight: bold;
+		line-height: 28dp;
+		text-align: left;
+		overflow: hidden;
+	}
+
+	.article .notes {
+		position: relative;
+		padding-left: 5dp;
+	}
+
+	.article .light-line {
+		position: absolute;
+		top: 4dp;
+		bottom: 2dp;
+		left: 0;
+		border-left: 2dp solid rgba(255, 240, 0, 1); 
+	}
+
+	.article span {
+		font-size: 12dp;
+		line-height: 16.5dp;
+	}
+
+	.article .sub-note {
+		position: absolute;
+		bottom: 10dp;
+		right: 10dp;
+		padding: 0 2dp;
+		border: 1dp solid rgba(255, 240, 0, 1);
+		color: rgba(255, 240, 0, 1);
+		font-size: 12dp;
+	}

@@ -1,0 +1,95 @@
+<div id="grid" class="grid">
+
+	<template article>
+		<figure class="card article" style="background-image: onload url({{attrs.datas.pic + '?w=' + 320*device.ui.scale}})" transform="newslist" param="article_id:{attrs.datas.articleId}" data-event="type:0,name:首页攻略页面埋点,value:{attrs.datas.title}" prefetch>
+			<div class="mask"></div>
+			<div class="content">
+				<h2>{attrs.datas.title}</h2>
+				<loop data="attrs.datas.city" as value key>
+					<if is="key != 0">&nbsp;<span class="pipe">&nbsp;</span>&nbsp;</if>
+					<span>{{value}}</span>
+				</loop>
+				<div class="notes">
+					<div class="light-line"></div>
+					<p><span>By {attrs.datas.author}</span></p>
+					<p><span>{attrs.datas.date}</span></p>
+				</div>
+			</div>
+			<div class="sub-note">{lang.guide}</div>
+		</figure>
+	</template>
+
+	<template guide>
+		<figure class="card guide" style="background-image: onload url({{attrs.datas.pic + '?w=' + 320*device.ui.scale}})" transform="guide-info" param="sellerid:{attrs.datas.guideId},shopid:{attrs.datas.guideId}" data-event="type:0,name:首页导游页面埋点,value:{attrs.datas.title}" prefetch>
+			<div class="mask"></div>
+			<div class="content">
+				<div class="author" style="background-image: onload url('{{attrs.datas.headpic + '?w=' + 50*device.ui.scale}}')"></div>
+				<h3>{attrs.datas.title}</h3>
+				<div class="notes">
+					<p><span>{attrs.datas.signature}</span></p>
+					<p>
+						<small>
+							<loop data="attrs.datas.tags" as value key>
+								<if is="key < 3">
+									{value}
+								</if>
+							</loop>
+						</small>
+					</p>
+				</div>
+			</div>
+			<div class="sub-note">
+				<i class="icon icon-location"></i>
+				<span class="city-name">{attrs.datas.city}</span>
+			</div>
+		</figure>
+	</template>
+
+	<template city>
+		<figure class="card city" style="background-image: onload url({{attrs.datas.pic + '?w=' + 320*device.ui.scale}})" transform="guide" param="cityid:{attrs.datas.pageId}" data-event="type:0,name:首页城市页面埋点,value:{{attrs.datas.title}}" prefetch>
+			<div class="mask"></div>
+			<div class="content">
+				<h2>{attrs.datas.title}</h2>
+				<div class="notes">
+					<strong>{attrs.datas.guide}</strong>&nbsp;{lang.aGuider}
+					<span class="pipe">&nbsp;</span>
+					<strong>{attrs.datas.travel}</strong>&nbsp;{lang.aGuideArticle}
+				</div>
+			</div>
+		</figure>
+	</template>
+
+	<template grid>
+		<switch case="type">
+			<case value="article">
+				<include article></include>
+			</case>
+			<case value="guide">
+				<include guide></include>
+			</case>
+			<case value="city">
+				<include city></include>
+			</case>
+		</switch>
+	</template>
+
+
+	<if is="config.infinite">
+		<scroll uuid="scroller" infinite="equal" item-size="180" template="grid" data="list.result.data" limit="50"></scroll>
+		<scroll-to-top></scroll-to-top>
+	</if><else>
+		<scroll uuid="scroller" native>
+			<loop data="list.result.data" as value key>
+				<include grid value></include>
+			</loop>
+		</scroll>
+		<scroll-to-top></scroll-to-top>
+	</else>
+
+	<if is="info.isLogin">
+		<div class="me" transform="me" data-event="type:1,name:个人中心" prefetch><i class="icon icon-me"></i></div>
+	</if><else>
+		<div class="me" hrefer="{info.loginApi}" data-event="type:1,name:个人中心"><i class="icon icon-me"></i></div>
+	</else>
+
+</div>

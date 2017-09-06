@@ -1,0 +1,114 @@
+<scroll fullscreen>
+    <scrolling>
+        <article>
+            <section>
+                <h2>helper <small>数据引用辅助方法集合</small></h2>
+                <scroll class=exp stop-propagation="auto" x=auto y=false>
+                    <scrolling style="min-width:{setting.articleWidth}dp">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>属性</th>
+                                    <th>类型</th>
+                                    <th>默认值</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>helper</td>
+                                    <td>Object</td>
+                                    <td>无</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </scrolling>
+                </scroll>
+                <p>helper 是模版数据引用辅助方法的集合，通过该集合能简化数据引用复杂度</p>
+                <code-highlight type=js>
+                    export default {
+                        resources: { ...resources },
+                        config: { ...config },
+                        helper: {
+                            encode : function (s) {
+                                return typeof s === 'string' ? encodeURIComponent(s) : s
+                            },
+                            decode : function (s) {
+                                return typeof s === 'string' ? decodeURIComponent(s) : s
+                            },
+                            replace : function (s, r, p) {
+                                return typeof s === 'string' ? s.replace(r, p) : s
+                            }
+                        }
+                    }
+                </code-highlight>
+                <p>在 helper 中设定了三个辅助方法后，通过下面的形式即可使用了</p>
+                <code-highlight type=html>
+                    <p>{name|encode}</p>
+                    <p>{title a A|replace}</p>
+                </code-highlight>
+                <p><a transform=docs-dom-echo>#了解模版数据引用</a></p>
+            </section>
+
+            <section>
+                <h2>controller <small>模块数据管理</small></h2>
+                <scroll class=exp stop-propagation="auto" x=auto y=false>
+                    <scrolling style="min-width:{setting.articleWidth}dp">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>属性</th>
+                                    <th>类型</th>
+                                    <th>默认值</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>controller</td>
+                                    <td>Object/Function</td>
+                                    <td>无</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </scrolling>
+                </scroll>
+                <p>controller 的任务是负责处理模块引用的数据</p>
+                <code-highlight type=js>
+                    export default {
+                        resources: { 
+                            list: "http://ioing.com/test.jsp|@param({id:id})"
+                            ...resources 
+                        },
+                        config: { 
+                            data: ["list"]
+                            ...config 
+                        },
+                        controller: {
+                            list : function (res) {
+                                ...Todo
+                                return res
+                            } 
+                        }
+                    }
+                </code-highlight>
+                <p>数据 list 来自服务器的返回结果首先通过 controller 中对应的 list 方法处理后返回给模版渲染</p>
+                <code-highlight type=js>
+                    export default {
+                        ...
+                        controller: function (id, res) {
+                            switch (id) {
+                                case 'list':
+                                    ...Todo
+                                    return res
+                                break
+                                ...
+                            }
+                        }
+                    }
+                </code-highlight>
+                <p>此为 controller 为函数时的等同写法</p>
+            </section>
+
+            <include footer></include>
+        </article>
+    </scrolling>
+</scroll>

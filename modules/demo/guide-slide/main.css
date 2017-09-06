@@ -1,0 +1,215 @@
+body {
+	overflow: hidden;
+	overflow-y: hidden;
+	background: #f5f5f5;
+}
+
+.page {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.scroll-main {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.scroller-content {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.scroll-guide {
+	box-flex: 1;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.header-plan {
+	position: relative;
+	z-index: 999;
+	height: 210dp;
+	transform: translate(0px, 0px) translateZ(0px);
+}
+
+.empty-list {
+	padding: 60dp 10dp;
+	text-align: center;
+	font-size: 14dp;
+}
+
+.card {
+	position: relative;
+	background-color: #f5f5f5;
+	background-size: cover;
+	color: #fff;
+}
+
+.card.header {
+	height: 170dp;
+}
+	
+	.card .mask {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+		background: rgba(0,0,0,.3);
+	}
+
+	.card .content {
+		position: relative;
+		z-index: 1;
+		padding: 10dp;
+	}
+
+.city h2 {
+	padding-top: 50dp;
+	font-size: 30dp;
+	line-height: 42dp;
+	font-weight: 400;
+	text-align: center;
+}
+
+.card.guide {
+	min-height: 250dp;
+	background: #fff;
+	border-bottom: 6dp solid #f5f5f5;
+	color: rgba(74, 74, 74, 1);
+}
+
+	.card.guide .content {
+		height: 170dp;
+		background: #f5f5f5;
+		background-size: cover;
+	}
+
+	.card.guide footer {
+		padding: 10dp;
+	}
+
+	.card.guide .notes {
+		padding-left: 66dp;
+		height: 56dp;
+		overflow: hidden;
+	}
+
+	.card.guide .notes p {
+		display: block;
+		width: 100%;
+		height: 16.5dp;
+		overflow: hidden;
+	}
+
+	.card.guide footer .author {
+		position: absolute;
+		width: 56dp;
+		height: 56dp;
+		border-radius: 28dp;
+		background-color: #f5f5f5;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.card.guide footer h3 {
+		font-size: 14dp;
+		line-height: 20dp;
+	}
+
+	.card.guide footer p {
+		font-size: 12dp;
+		line-height: 16.5dp;
+	}
+
+	.card.guide footer .tags {
+		display: block;
+		height: 18dp;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		padding-top: 2dp;
+		color: rgba(80, 210, 194, 1);
+	}
+
+	.card.guide footer .tags li {
+		float: left;
+		position: relative;
+		margin-right: 7dp;
+		margin-bottom: 4dp;
+		padding: 0 7dp 0 10dp;
+		font-size: 10dp;
+		line-height: 14dp;
+		height: 16dp;
+		border: 1dp solid rgba(80, 210, 194, 1);
+		border-radius: 14dp;
+	}
+
+	.card.guide footer .tags li:before {
+		content: ' ';
+		position: absolute;
+		left: 2dp;
+		top: 50%;
+		margin: -2dp 0 0;
+		display: block;
+		height: 2dp;
+		width: 2dp;
+		border: 1dp solid rgba(80, 210, 194, 1);
+		border-radius: 2dp;
+	}
+
+.card.article {
+	height: 170dp;
+	text-align: left;
+}
+
+	.card.article h2 {
+		padding-top: 5dp;
+		font-size: 20dp;
+		font-weight: bold;
+		line-height: 28dp;
+		text-align: left;
+	}
+
+	.card.article .notes {
+		position: relative;
+		padding-left: 5dp;
+	}
+
+	.card.article .light-line {
+		position: absolute;
+		top: 4dp;
+		bottom: 2dp;
+		left: 0;
+		border-left: 2dp solid rgba(255, 240, 0, 1); 
+	}
+
+	.card.article span {
+		font-size: 12dp;
+		line-height: 16.5dp;
+	}
+
+	.card.article .sub-note {
+		position: absolute;
+		bottom: 10dp;
+		right: 10dp;
+		padding: 0 2dp;
+		border: 1dp solid rgba(255, 240, 0, 1);
+		color: rgba(255, 240, 0, 1);
+		font-size: 10dp;
+	}
+

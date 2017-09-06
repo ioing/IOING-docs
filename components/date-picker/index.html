@@ -529,10 +529,24 @@ two.init()
 
 <div uuid="date-plugin" class="date-plugin"></div>
 
-
 <template name="main-html">
 	<div uuid=d-date-box class="d-date-box">
-		<div class="d-date-btns"><button class="d-btn" id="d-cancleBtn">取消</button><button class="d-btn" id="d-okBtn">确定</button></div>
+        <script sync>
+            // 不要将该代码移除 template， 否则作用域将失效
+            var lang = {
+                "en": {
+                    "cancle": "cancle",
+                    "ok": "ok"
+                },
+                "zh-CN": {
+                    "cancle": "取消",
+                    "ok": "确定"
+                }
+            }
+
+            scope.language = lang[navigator.language] || lang["en"]
+        </script>
+		<div class="d-date-btns"><button class="d-btn" id="d-cancleBtn">{language.cancle}</button><button class="d-btn" id="d-okBtn">{language.ok}</button></div>
 		<p class="d-date-info">
 			<span class="d-day-info"></span>
 			<span class="d-return-info"></span>

@@ -41,27 +41,29 @@ export default {
                 theme : (function () {
                     var theme = [
                             {
+                                color: '#4267b2',
+                                background: '#e9ebee'
+                            },
+                            {
                                 color: '#ff5252',
-                                background: '#ff5252 onload(opacity:1) url({id})'
+                                background: '#fafafa'
                             },
                             {
                                 color: '#00bc9c',
-                                background: '#00bc9c onload(opacity:1) url({id})'
+                                background: '#fafafa'
                             },
                             {
                                 color: '#ff7752',
-                                background: '#ff7752 onload(opacity:1) url({id})'
+                                background: '#fafafa'
                             },
                             {
-                                color: '#43d297',
-                                background: '#43d297 onload(opacity:1) url({id})'
+                                color: '#44bb8a',
+                                background: '#fafafa'
                             }
                         ]
 
 
                     var i = 0
-                    var earth = [5310,6356,6160,6293,5044,5181,6161,2056,1494,5957,1199,1056,2284,6578,6543,1212]
-
                     try {
                         i = sessionStorage.getItem('_theme') || -1
                         i++
@@ -72,8 +74,6 @@ export default {
                     if ( i > 1 ) {
                         theme = theme.sort(function(){ return 0.5 - Math.random() })
                     }
-                    earth = earth.sort(function(){ return 0.5 - Math.random() })
-                    theme[i].background = theme[i].background.replace('{id}', 'https://www.gstatic.com/prettyearth/assets/full/' + earth[i] + '.jpg')
 
                     return theme[i]
                 })()
@@ -174,6 +174,15 @@ export default {
                             href : "docs-module-event" ,
                             keys : [
                                 "模块事件"
+                            ]
+                        },
+                        { 
+                            title : "辅助项" , 
+                            href : "docs-module-assist" ,
+                            keys : [
+                                "模块辅助",
+                                "helper",
+                                "controller"
                             ]
                         }
                     ]
@@ -508,12 +517,19 @@ export default {
                             keys : [
                                 "数据"
                             ] 
-                        },
+                        }
+                    ]
+                },
+                {
+                    id : "developers",
+                    title : "开发",
+                    desc : "组件化与组",
+                    list : [
                         { 
-                            title : "特性" , 
-                            href : "docs-components-props" ,
+                            title : "debug" , 
+                            href : "docs-developers-debug" ,
                             keys : [
-                                "特性"
+                                "debug"
                             ] 
                         }
                     ]
@@ -534,7 +550,7 @@ export default {
             },
             comp: function () {
                 var comp = [
-                    "demo/banner-slider",
+                    "demo/snap-scroll",
                     "demo/photo-tilt",
                     "demo/scroll-to-top",
                     "demo/date-picker",

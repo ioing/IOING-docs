@@ -226,7 +226,7 @@ section {
     }
     
     > section {
-        float: right;
+        float: left;
         width: [article-width];
         @class: model();
     }

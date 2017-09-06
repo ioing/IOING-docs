@@ -1,14 +1,14 @@
-<scroll fullscreen class="flow-card">
+<scroll fullscreen>
     <scrolling>
         <article>
             <section>
                 <h2>全部</h2>
                 <loop all.components as value i>
-                    <div class="card-info" transform="components-detail" param="id/{value.href}">
-                        <div class="card-icon" style="background-image: url({value.href}/preview.jpg)"></div>
+                    <div class="card-body" transform="components-detail" param="id/{value.href}">
+                        <div class="card-icon" style="background-image: url(/{value.href}/preview.jpg)"></div>
                         <div class="card-title">
+                            <div class="card-id"><{value.id}></div>
                             {value.name}
-                            <div class="card-type-text">{value.free}</div>
                         </div>
                     </div>
                 </loop>

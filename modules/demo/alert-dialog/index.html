@@ -8,9 +8,9 @@
 sounds and icon badges. These can be configured in Settings." type="2"></alert-dialog>
 
 <script>
-	$$('alert-dialog').one('ready', function (argument) {
+	$$('alert-dialog').on('ready', function (argument) {
 		this.trigger('open')
-	}).one('ok cancel', function () {
+	}).on('ok cancel', function () {
 		App.to(-1)
 	})
 </script>

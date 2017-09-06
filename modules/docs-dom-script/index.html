@@ -2,6 +2,24 @@
     <scrolling>
         <article>
             <section>
+                <h2>sync</h2>
+                <p>使用 sync 属性能够让该内链脚本在编译时执行，此时该脚本中可获取两个特殊对象<code>scope</code>和<code>node</code>，其分别是运行时的数据源对象和模版 Node 对象</p>
+                <code-highlight type=html>
+                    <script sync es6>
+                        scope.newData = {
+                            name: "lilei"
+                        }
+                    </script>
+                    <p>{newData.name}</p>
+                </code-highlight>
+                <p>通过操作 scope 可以便利的把一些特定数据加入到数据源中</p>
+                <blockquote>
+                    <h5>提要</h5>
+                    <p>默认所有的内链 script 都是以 async 方式执行的，即脚本运行前 DOM 都是已经存在的</p>
+                </blockquote>
+            </section>
+
+            <section>
                 <h2>特性作用域</h2>
                 <p>只有模块及组件中的嵌入式脚本才具备以下描述特性，使用 config 配置或使用 src 特性载入的 JS 文件都将以传统 JS 方式执行<span>不具备以下描述特性</span></p>
                 <p>这是模块中的一段代码</p>
@@ -30,7 +48,10 @@
                         }
                     })
                 </code-highlight>
-                <blockquote>如果需要引入 JS 库，建议使用嵌入式脚本加 import 的方式载入，这样即可以在代码中方便的使用内置变量了</blockquote>
+                <blockquote>
+                    <h5>注意</h5>
+                    <p>如果需要引入 JS 库，建议使用嵌入式脚本加 import 的方式载入，这样即可以在代码中方便的使用内置变量了</p>
+                </blockquote>
             </section>
 
             <section>
@@ -55,7 +76,7 @@
 
             <section>
                 <h2>normal</h2>
-                <p>如果我们需要将某个 script 代码段放置到全局作用域中运行时该怎么做呢？这个时候我们需要使用<code>normal</code>属性。</p>
+                <p>如果我们需要将某个 script 代码段放置到全局作用域中运行时该怎么做呢？这个时候我们需要使用<code>normal</code>属性</p>
                 <code-highlight type=html>
                     <script normal>
                         var a = 1
@@ -322,7 +343,7 @@
                         })
                     </script>
                 </code-highlight>
-                <p>通过为组件注册新的方法或值能够为组件使用者提供更多可用API</p>
+                <p>通过为组件注册新的方法或值能够为组件使用者提供更多可用 API</p>
             </section>
 
             <include footer></include>

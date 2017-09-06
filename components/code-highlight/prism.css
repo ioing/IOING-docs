@@ -14,8 +14,8 @@ scroll {
 	opacity: 0;
 }
 
-scroll.error scrolling {
-	border-left: solid 2dp #FE3824;
+scroll.error {
+	background: #fdebeb;
 }
 
 scrolling {

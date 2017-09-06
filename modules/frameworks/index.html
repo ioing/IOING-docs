@@ -19,9 +19,10 @@
             IOING
         </div>
         <div class="site-logo-text">
-            <span class="{setting.status.activeMainNav,'components'|activeMainNav}">推荐</span>
+            <span class="{setting.status.activeMainNav,'discover'|activeMainNav}">推荐</span>
+            <span class="{setting.status.activeMainNav,'components'|activeMainNav}">组件</span>
             <span class="{setting.status.activeMainNav,'docs'|activeMainNav}">文档</span>
-            <!-- <span class="{setting.status.activeMainNav,'developers'|activeMainNav}">开发者</span> -->
+            <span class="{setting.status.activeMainNav,'developers'|activeMainNav}">教程</span>
         </div>
 
         <nav class="site-nav more-nav {{setting.status.showMoreNav ? 'visible' : 'hidden'}}">
@@ -34,9 +35,10 @@
 
         <nav class="site-nav">
             <ul>
-                <li><a class="{setting.status.activeMainNav,'components,tutorial'|activeMainNav}" transform="components-store">推荐</a></li>
+                <li><a class="{setting.status.activeMainNav,'discover'|activeMainNav}" transform="discover-index">推荐</a></li>
                 <li><a class="{setting.status.activeMainNav,'docs'|activeMainNav}" transform="docs-started-ioing">文档</a></li>
-                <!-- <li><a class="{setting.status.activeMainNav,'developers'|activeMainNav}" transform="developers-notice">开发者</a></li> -->
+                <li><a class="{setting.status.activeMainNav,'components'|activeMainNav}" transform="components-list">组件</a></li>
+                <!-- <li><a class="{setting.status.activeMainNav,'tutorial'|activeMainNav}" transform="developers-notice">教程</a></li> -->
             </ul>
         </nav>
     </div>
@@ -101,7 +103,7 @@
                     </nav>
                 </section>
             </div> -->
-            <div class="section-mod docs-nav {setting.status.activeMainNav, 'docs,components,tutorial,developers'|showAsideNav}">
+            <div class="section-mod docs-nav {setting.status.activeMainNav, 'docs,components,tutorial,discover'|showAsideNav}">
                 <section class="search-mod">
                     <div class="search-box">
                         <input type="text" placeholder="检索文档类目" on-input="search::searchDoc(this)">
@@ -126,7 +128,7 @@
             <div class="section-mod docs-nav {setting.status.activeMainNav, 'docs'|showAsideNav}">
                 <include nav></include>
             </div>
-            <div class="section-mod {setting.status.activeMainNav, 'components,tutorial,developers'|showAsideNav}">
+            <div class="section-mod {setting.status.activeMainNav, 'components,tutorial,discover'|showAsideNav}">
                 <section class="hover-item">
                     <scroll class=midea-box>
                         <scrolling>
@@ -151,7 +153,7 @@
                     </nav>
                 </section>
             </div>
-            <div class="section-mod {setting.status.activeMainNav, 'docs,components,tutorial,developers'|showAsideNav}">
+            <div class="section-mod {setting.status.activeMainNav, 'docs,components,tutorial,discover'|showAsideNav}">
                 <section class=links-list>
                     <h3 class="hd">标签</h3>
                     <ul class="list-of-lists">
@@ -185,12 +187,13 @@
     </scroll>
 </aside>
 
+
 <footer id="footer">
     <nav>
         <ul>
 
             <li>
-                <a transform="components-store" class="{setting.status.activeMainNav,'components','scaleBounce active','reScaleBounce'|activeMainNav}">
+                <a transform="discover-index" class="{setting.status.activeMainNav,'discover','scaleBounce active','reScaleBounce'|activeMainNav}">
                     <span class="icon nav-icon-activity"></span>
                     <span class="title"></span>
                 </a>
@@ -202,29 +205,17 @@
                     <span class="title"></span>
                 </a>
             </li>
-<!-- 
-            <li>
-                <a transform="boutique" param="aa:cc,ee:ss">
-                    <span class="icon nav-icon-boutique"></span>
-                    <span class="title"></span>
-                </a>
-                <div class="active">
-                    <span class="icon nav-icon-boutique"></span>
-                </div>
-            </li> -->
 
-            <!-- <li>
-                <a transform="developers-notice" class="{setting.status.activeMainNav,'developers','scaleBounce active','reScaleBounce'|activeMainNav}">
+            <li>
+                <a transform="components-list" class="{setting.status.activeMainNav,'components','scaleBounce active','reScaleBounce'|activeMainNav}">
                     <span class="icon nav-icon-test1"></span>
                     <span class="title"></span>
                 </a>
-            </li> -->
+            </li>
 
         </ul>
     </nav>
 </footer>
-
-<div class=main-bg></div>
 
 <if status.exists>
     <shadow>

@@ -2324,11 +2324,11 @@ define('~/scroll', [], function (require, module, exports) {
 					// Slow down if outside of the boundaries
 
 					if ( newX > this.minScrollX || newX < this.maxScrollX ) {
-						this.bounceDragPhase++
+						this.bounceDragPhase = newX > this.minScrollX ? newX - this.minScrollX : this.maxScrollX - newX
 						newX = this.options.bounce ? this._x + deltaX / (this.options.bounceDrag + this.bounceDragPhase / this.options.bounceDragRate) : newX > this.minScrollX ? this.minScrollX : this.maxScrollX
 					}
 					if ( newY > this.minScrollY || newY < this.maxScrollY ) {
-						this.bounceDragPhase++
+						this.bounceDragPhase = newY > this.minScrollY ? newY - this.minScrollY : this.maxScrollY - newY
 						newY = this.options.bounce ? this._y + deltaY / (this.options.bounceDrag + this.bounceDragPhase / this.options.bounceDragRate) : newY > this.minScrollY ? this.minScrollY : this.maxScrollY
 					}
 

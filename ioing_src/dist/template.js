@@ -130,19 +130,23 @@ define('~/template', ['~/css', '~/dom'], function (require, module, exports) {
                 return this.render(id, module, prefetched);
             }
 
-            App.async.fetch(id, config, module.param, function () {
+            // async!!!important 
 
-                // render
+            setTimeout(function () {
+                App.async.fetch(id, config, module.param, function () {
 
-                that.render(id, module, arguments);
+                    // render
 
-                if (module.config.cache && !module.config.update) {
-                    module.prefetch[module.dimension] = arguments;
-                    module.updatetime[module.dimension] = Date.now();
-                }
-            }, function () {
-                that.errored(module);
-            });
+                    that.render(id, module, arguments);
+
+                    if (module.config.cache && !module.config.update) {
+                        module.prefetch[module.dimension] = arguments;
+                        module.updatetime[module.dimension] = Date.now();
+                    }
+                }, function () {
+                    that.errored(module);
+                });
+            }, 0);
         },
 
         scope: function scope(sandbox, context, content) {

@@ -1836,6 +1836,8 @@ define('~/dom', [], function (require, module, exports) {
                 case 'INPUT':
                 case 'TEXTAREA':
                 case 'HTMLAREA':
+                case 'SELECT':
+                case 'SELECTER':
                     
                     /* DEMO
                      * 1. <input react="keydown" value="{data.count}">
@@ -1892,6 +1894,8 @@ define('~/dom', [], function (require, module, exports) {
                             })
                         }
                     }
+
+                    if ( name.indexOf('SELECT') == 0 ) break
 
                     // transformstart blur
 
@@ -2321,7 +2325,7 @@ define('~/dom', [], function (require, module, exports) {
                                 var data = dataRows && this.infiniteDataLength === 0 ? scope : null
                                     
                                 that.module.turnover({
-                                    id : uuid,
+                                    id : node.id || node.uuid || uuid,
                                     data : data, 
                                     start : start, 
                                     limit : dataLimit, 
@@ -2834,6 +2838,9 @@ define('~/dom', [], function (require, module, exports) {
                     node.innerHTML = null
 
                     dom.extendProperty("update", render)
+                    dom.extendProperty("setState", function (d) {
+                        data.extend(d)
+                    })
                     dom.extendProperty("reflow", function () {
                         that.reflow(dom.previousScroller)
                     })

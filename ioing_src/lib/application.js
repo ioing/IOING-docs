@@ -140,10 +140,10 @@ define('~/application', ['~/proto', '~/fetch', '~/transform', '~/template'], fun
             // set module param
 
             this.setParam(((param) => {
-                param.page = param._page = param.$page = Math.ceil(start / limit)
-                param.start = param._start = param.$start = start
-                param.limit = param._limit = param.$limit = limit
-                param.turnover = param._turnover = param.$turnover = turnover
+                param[id + '_page'] = param.page = param._page = param.$page = Math.ceil(start / limit)
+                param[id + '_start'] = param.start = param._start = param.$start = start
+                param[id + '_limit'] = param.limit = param._limit = param.$limit = limit
+                param[id + '_turnover'] = param.turnover = param._turnover = param.$turnover = turnover
 
                 return param
             })({}))
@@ -601,7 +601,7 @@ define('~/application', ['~/proto', '~/fetch', '~/transform', '~/template'], fun
 					failed && failed()
 				})
 			} else {
-				callback.apply([modules[id]])
+				callback.apply(this, [modules[id]])
 
 				return modules[id]
 			}
